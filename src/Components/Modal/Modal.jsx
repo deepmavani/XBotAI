@@ -34,7 +34,6 @@ export default function SuggesionModal({ handleClose, open, setFeedback }) {
                     <IconButton onClick={()=>{
                         handleClose(false)
                     }}>
-                        <Typography variant="h1" component="h1">X</Typography>
                     </IconButton>
                 </Stack>
                 <Stack direction={'column'} component={'form'} onSubmit={(e) => { e.preventDefault();setFeedback(input); handleClose(false) }}>
@@ -44,13 +43,11 @@ export default function SuggesionModal({ handleClose, open, setFeedback }) {
                         width={'100%'}
                         required
                         maxRows={9}
-                        minRows={6}
                         onChange={(e) => setInput(e.currentTarget.value)} />
                     <Button
                         sx={{
                             bgcolor: 'primary.main',
                             color: 'text.primary',
-                            width: 'fit-content',
                             alignSelf: 'end',
                             mt: 1,
                             px: 3
